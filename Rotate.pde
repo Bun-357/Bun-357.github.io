@@ -23,12 +23,21 @@ void draw() {
   background(51);
 
   // during even-numbered seconds (0, 2, 4, 6...)
-  if (second() % 2 == 0) {  
-    jitter = random(-0.1, 0.1);
+  if (millis() % 2 == 0) {  
+   // jitter = random(-0.1, 0.1);
+   jitter ++;
+   println(angle);
   }
-  angle = angle + jitter;
-  float c = cos(angle);
+  
+  if( jitter>360){
+     jitter = 0;
+  }
+   
+  angle = radians(jitter);
+  //float c = cos(angle);
   translate(width/2, height/2);
-  rotate(c);
-  rect(0, 0, 180, 180);   
+  rotate(angle);
+  //rect(0, 90, 18, 180);   
+  rect(0, 0, 180, 18); 
+  //line(0, 0, 18, 10);
 }
