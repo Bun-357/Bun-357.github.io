@@ -26,7 +26,7 @@ void draw() {
   if (millis() % 2 == 0) {  
    // jitter = random(-0.1, 0.1);
    jitter ++;
-   println(degrees(angle));
+   println(jitter);
   }
   
   if( jitter>360){
