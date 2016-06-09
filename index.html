@@ -10,28 +10,29 @@
         alias : "myX"         /*  optional  */
     });
 
-    microgear.on('message',function(topic,msg) {
+   /* microgear.on('message',function(topic,msg) {
         document.getElementById("data").innerHTML = msg;
     });
-
+*/
     microgear.on('connected', function() {
         microgear.setAlias('myX');    /* alias can be renamed anytime with this function */
         document.getElementById("data").innerHTML = "Now I am connected with netpie...";
         setInterval(function() {
-            microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
+           // microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
         });
     });
 
-    microgear.on('present', function(event) {
+    /*microgear.on('present', function(event) {
         console.log(event);
     });
 
     microgear.on('absent', function(event) {
         console.log(event);
     });
-
+*/
     microgear.connect(APPID);
+	microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
 </script>
 
 <div id="data">_____</div>
-<input id="clickMe" type="button" value="clickme" onclick="microgear.on();" />
+<input id="clickMe" type="button" value="clickme" onclick="microgear.chat();" />
