@@ -201,7 +201,7 @@
     <script>
       var member = [];
       var autoscroll = true;
-      var name = "";
+      var name = "myX";
       var microgear ;
       function setInformation(){
         before_connect();
@@ -214,7 +214,7 @@
         microgear = Microgear.create({
           gearkey: APPKEY,
           gearsecret: APPSECRET
-		  alias : "myhtml"         /*  optional  */
+		  
         });
         microgear.on('message',function(topic,msg) {
           console.log(msg);
