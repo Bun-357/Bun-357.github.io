@@ -214,6 +214,7 @@
         microgear = Microgear.create({
           gearkey: APPKEY,
           gearsecret: APPSECRET
+		  alias : "myhtml"         /*  optional  */
         });
         microgear.on('message',function(topic,msg) {
           console.log(msg);
