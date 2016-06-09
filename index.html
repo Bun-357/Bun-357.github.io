@@ -32,7 +32,11 @@
 */
     microgear.connect(APPID);
 	microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
+	
+	var chat() {
+		microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
+	}
 </script>
 
 <div id="data">_____</div>
-<input id="clickMe" type="button" value="clickme" onclick="microgear.chat();" />
+<input id="clickMe" type="button" value="clickme" onclick="chat" />
