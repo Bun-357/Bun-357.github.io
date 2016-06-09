@@ -33,7 +33,7 @@
     microgear.connect(APPID);
 	microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
 	
-	var chat() {
+	window.chat = function() {
 		microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
 	}
 </script>
