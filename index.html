@@ -19,7 +19,7 @@
         document.getElementById("data").innerHTML = "Now I am connected with netpie...";
         setInterval(function() {
             microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
-        },5000);
+        });
     });
 
     microgear.on('present', function(event) {
@@ -34,3 +34,4 @@
 </script>
 
 <div id="data">_____</div>
+<input id="clickMe" type="button" value="clickme" onclick="microgear.on();" />
