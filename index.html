@@ -10,12 +10,17 @@
         alias : "myX"         /*  optional  */
     });
 	
-	window.chat = function() {
+	var chatX = function() {
 		microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
 	}
     microgear.on('message',function(topic,msg) {
         document.getElementById("data").innerHTML = msg;
     });
+	
+	microgear.on('connected', function() {
+		microgear.setAlias('myX');
+		document.getElementById("data").innerHTML = "Now I am connected with netpie...";
+	}
 */
    // microgear.on('connected', function() {
    //     microgear.setAlias('myX');    /* alias can be renamed anytime with this function */
@@ -39,4 +44,4 @@
 </script>
 
 <div id="data">_____</div>
-<input id="clickMe" type="button" value="clickme" onclick="chat" />
+<input id="clickMe" type="button" value="clickme" onclick="chat();" />
