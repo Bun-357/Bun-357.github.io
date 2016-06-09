@@ -10,25 +10,20 @@
         alias : "myX"         /*  optional  */
     });
 	
-	var chatX = function() {
-		microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
-	}
+	
     microgear.on('message',function(topic,msg) {
         document.getElementById("data").innerHTML = msg;
     });
 	
-	microgear.on('connected', function() {
-		microgear.setAlias('myX');
-		document.getElementById("data").innerHTML = "Now I am connected with netpie...";
-	}
+	
 
-   // microgear.on('connected', function() {
-   //     microgear.setAlias('myX');    /* alias can be renamed anytime with this function */
-   //     document.getElementById("data").innerHTML = "Now I am connected with netpie...";
-   //     setInterval(function() {
+    microgear.on('connected', function() {
+       microgear.setAlias('myX');    /* alias can be renamed anytime with this function */
+        document.getElementById("data").innerHTML = "Now I am connected with netpie...";
+        //setInterval(function() {
            // microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
-   //     });
-   // });
+      //});
+    });
 
     microgear.on('present', function(event) {
         console.log(event);
@@ -39,9 +34,14 @@
     });
 
     microgear.connect(APPID);
+	
 	//microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
+	function myFunction() {
+		//document.getElementById("field2").value = document.getElementById("field1").value;
+		microgear.chat("Led8x8Mono","Hello from "+myX+" at "+Date.now());
+    }
 
 </script>
 
 <div id="data">_____</div>
-<input id="clickMe" type="button" value="clickme" onclick="chatX();" />
+<<button onclick="myFunction()">send Date.now</button>
