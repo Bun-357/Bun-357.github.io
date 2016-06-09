@@ -9,8 +9,11 @@
         secret: APPSECRET,
         alias : "myX"         /*  optional  */
     });
-
-   /* microgear.on('message',function(topic,msg) {
+	
+	window.chat = function() {
+		microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
+	}
+    microgear.on('message',function(topic,msg) {
         document.getElementById("data").innerHTML = msg;
     });
 */
@@ -31,11 +34,8 @@
     });
 */
     microgear.connect(APPID);
-	microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
-	
-	window.chat = function() {
-		microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
-	}
+	//microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
+
 </script>
 
 <div id="data">_____</div>
