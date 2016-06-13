@@ -3,11 +3,12 @@
   const APPID     = "Led8x8Mono";
   const APPKEY    = "8NH4EmFlB4qIRe9";
   const APPSECRET = "Za2VI7miO3Zq1PkXfLmXyzR06";
+  const ALIAS = "myX";
 
     var microgear = Microgear.create({
         key: APPKEY,
         secret: APPSECRET,
-        alias : "myX"         /*  optional  */
+        alias : ALIAS         /*  optional  */
     });
 	
 	
@@ -18,7 +19,7 @@
 	
 
     microgear.on('connected', function() {
-       microgear.setAlias('myX');    /* alias can be renamed anytime with this function */
+       //microgear.setAlias('myX');    /* alias can be renamed anytime with this function */
         document.getElementById("data").innerHTML = "Now I am connected with netpie...";
         //setInterval(function() {
            // microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
@@ -38,12 +39,11 @@
 	//microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
 	function myFunction() {
 		//document.getElementById("field2").value = document.getElementById("field1").value;
-		microgear.chat("Led8x8Mono","a60b66c149d161e161f149g66h60i");
-		document.getElementById("data2").innerHTML = microgear.alias;
+		microgear.chat("Led8x8Mono","a60b66c149d161e161f149g66h60i"+ALIAS+"j");
+		
     }
 
 </script>
 
 <div id="data">_____</div>
 <button onclick="myFunction()">send :)</button>
-<div id="data2">_____</div>
