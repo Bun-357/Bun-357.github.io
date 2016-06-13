@@ -38,7 +38,11 @@
     microgear.on('absent', function(event) {
         console.log(event);
     });
-
+	
+	microgear.on("error", function(err) {
+		console.log("Error: "+err);
+		document.getElementById("data3").innerHTML = "Error: "+err;
+	});
     microgear.connect(APPID);
 	
 	//microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
@@ -64,3 +68,4 @@
 
 <div id="data2">_____</div>
 <input type="text"  value="Send to?" id="lolz"/>
+<div id="data3"> </div>
