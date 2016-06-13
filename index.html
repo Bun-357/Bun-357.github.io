@@ -14,6 +14,7 @@
 	
     microgear.on('message',function(topic,msg) {
         document.getElementById("data").innerHTML = msg;
+		document.getElementById("data2").innerHTML = topic;
     });
 	
 	
@@ -47,3 +48,4 @@
 
 <div id="data">_____</div>
 <button onclick="myFunction()">send :)</button>
+<div id="data2">_____</div>
