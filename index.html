@@ -49,14 +49,14 @@
 	function myFunction() {
 		//document.getElementById("field2").value = document.getElementById("field1").value;
 		sendTo = document.getElementById('lolz').value;
-		microgear.chat(sendTo,"a"+dataW[0]+"b"+dataW[1]+"c"+dataW[2]+"d"+dataW[3]+"e"+dataW[4]+"f"+dataW[5]+"g"+dataW[6]+"h"+dataW[7]+"i"+ALIAS+"j");
-		
+		//microgear.chat(sendTo,"a"+dataW[0]+"b"+dataW[1]+"c"+dataW[2]+"d"+dataW[3]+"e"+dataW[4]+"f"+dataW[5]+"g"+dataW[6]+"h"+dataW[7]+"i"+ALIAS+"j");
+		microgear.chat(sendTo,dataW.toString()+ALIAS);
     }
 	function myFunction2() {
 		//document.getElementById("field2").value = document.getElementById("field1").value;
 		sendTo = document.getElementById('lolz').value;
 		//microgear.chat(sendTo,"a"+dataS[0]+"b"+dataS[1]+"c"+dataS[2]+"d"+dataS[3]+"e"+dataS[4]+"f"+dataS[5]+"g"+dataS[6]+"h"+dataS[7]+"i"+ALIAS+"j");
-		microgear.chat(sendTo,dataS.toString());
+		microgear.chat(sendTo,dataS.toString()+ALIAS);
 		//{0,252,114,243,127,243,114,252}
 		
 		
