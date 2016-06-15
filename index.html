@@ -5,6 +5,7 @@
   const APPSECRET = "Za2VI7miO3Zq1PkXfLmXyzR06";
   const ALIAS = "myX";
   
+  var count = 0;
   var dataS = [60,66,149,161,161,149,66,60];
   //a0b252c114d243e127f243g114h252i
   var dataW = [0,252,114,243,127,243,114,252];
@@ -17,16 +18,24 @@
 	
 	
     microgear.on('message',function(topic,msg) {
+    	
         document.getElementById("data").innerHTML = msg;
 		document.getElementById("data2").innerHTML = topic;
 		//
 		//str.indexOf("welcome")
-		var str = msg;
-		document.getElementById("data3").innerHTML = str.substring(str.indexOf(",")+1, str.indexOf("~"));
-		//var b = str.substring(str.indexOf(",")+1, str.indexOf("~"));
-		sendTo = document.getElementById('lolz').value;
-		//
-		microgear.chat(sendTo,"555");
+		if(count == 1){
+			var str = msg;
+			document.getElementById("data3").innerHTML = str;
+			//var b = str.substring(str.indexOf(",")+1, str.indexOf("~"));
+			sendTo = document.getElementById('data3').value;
+			//
+			microgear.chat(sendTo,"555");
+		}
+		
+		count++;
+		if(count == 1){
+		   count = 0;	
+		}
     });
 	
 	
