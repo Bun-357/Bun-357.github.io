@@ -23,8 +23,9 @@
 		//str.indexOf("welcome")
 		var str = msg;
 		document.getElementById("data3").innerHTML = str.substring(str.indexOf(",")+1, str.indexOf("~"));
+		var b = str.substring(str.indexOf(",")+1, str.indexOf("~"));
 		//
-		//microgear.chat(sendTo,dataS.toString()+","+ALIAS);
+		microgear.chat(b,b);
     });
 	
 	
