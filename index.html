@@ -19,6 +19,11 @@
     microgear.on('message',function(topic,msg) {
         document.getElementById("data").innerHTML = msg;
 		document.getElementById("data2").innerHTML = topic;
+		//
+		//str.indexOf("welcome")
+		document.getElementById("data3").innerHTML = msg.substring(str.indexOf(","), str.indexOf("~"));
+		//
+		//microgear.chat(sendTo,dataS.toString()+","+ALIAS);
     });
 	
 	
@@ -41,7 +46,7 @@
 	
 	microgear.on("error", function(err) {
 		console.log("Error: "+err);
-		document.getElementById("data3").innerHTML = "Error: "+err;
+		//document.getElementById("data3").innerHTML = "Error: "+err;
 	});
     microgear.connect(APPID);
 	
