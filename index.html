@@ -23,9 +23,10 @@
 		//str.indexOf("welcome")
 		var str = msg;
 		document.getElementById("data3").innerHTML = str.substring(str.indexOf(",")+1, str.indexOf("~"));
-		var b = str.substring(str.indexOf(",")+1, str.indexOf("~"));
+		//var b = str.substring(str.indexOf(",")+1, str.indexOf("~"));
+		sendTo = document.getElementById('data3').value;
 		//
-		microgear.chat(b,555);
+		microgear.chat(sendTo,"555");
     });
 	
 	
