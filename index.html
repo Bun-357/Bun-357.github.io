@@ -21,7 +21,8 @@
 		document.getElementById("data2").innerHTML = topic;
 		//
 		//str.indexOf("welcome")
-		document.getElementById("data3").innerHTML = msg.substring(msg.indexOf(","), msg.indexOf("~"));
+		var str = msg;
+		document.getElementById("data3").innerHTML = str.substring(str.indexOf(","), str.indexOf("~"));
 		//
 		//microgear.chat(sendTo,dataS.toString()+","+ALIAS);
     });
