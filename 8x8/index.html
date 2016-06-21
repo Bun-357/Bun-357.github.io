@@ -201,6 +201,14 @@
 <div id="data3"> </div>
 
 <script>
+var z = [0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0];
 function myFunction() {
     //var x = document.getElementById("myRadio1").value;
     //document.getElementById("demo").innerHTML = x;
@@ -214,14 +222,7 @@ function myFunction() {
     var row8 = [];
 
     //
-	var z = [0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0];
+	
     //get row 1
 
     if(document.getElementById("r10").checked ){
@@ -596,7 +597,12 @@ row8[8] = parseInt(row8[0])+ parseInt(row8[1])+ parseInt(row8[2])+ parseInt(row8
 	
     
 	//
-	function uncheck(xx,yy) {
+	
+	
+	//
+}
+
+function uncheck(xx,yy) {
 
 		if(document.getElementById(xx).checked && z[yy] == 1){
 			document.getElementById(xx).checked = false;
@@ -609,9 +615,6 @@ row8[8] = parseInt(row8[0])+ parseInt(row8[1])+ parseInt(row8[2])+ parseInt(row8
 		}
   
 	}
-	
-	//
-}
 </script>
 
 </body>
