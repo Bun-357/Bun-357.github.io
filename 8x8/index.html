@@ -214,6 +214,14 @@ function myFunction() {
     var row8 = [];
 
     //
+	var z = [0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0,
+			0,0,0,0,0,0,0,0];
     //get row 1
 
     if(document.getElementById("r10").checked ){
@@ -585,26 +593,19 @@ row8[8] = parseInt(row8[0])+ parseInt(row8[1])+ parseInt(row8[2])+ parseInt(row8
 	var temps = [row1[8],row2[8],row3[8],row4[8],row5[8],row6[8],row7[8],row8[8]];
 	myFunction3(temps);
 	//
-	var z = [0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0];
+	
     
 	//
-	function uncheck(x,y) {
+	function uncheck(xx,yy) {
 
-		if(document.getElementById(x).checked && z[y] == 1){
+		if(document.getElementById(xx).checked && z[yy] == 1){
 			document.getElementById(x).checked = false;
-			z[y] = 0;
+			z[yy] = 0;
 		}
 
-		if(document.getElementById(x).checked && z[y] == 0){
-			document.getElementById(x).checked = true;
-			z[y] = 1;
+		if(document.getElementById(xx).checked && z[yy] == 0){
+			document.getElementById(xx).checked = true;
+			z[yy] = 1;
 		}
   
 	}
