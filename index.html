@@ -50,6 +50,7 @@
         document.getElementById("data").innerHTML = "Now I am connected with netpie...";
         //setInterval(function() {
            // microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
+	    microgear.subscribe("/video/1");
       //});
 	    
     });
@@ -67,7 +68,7 @@
 		//document.getElementById("data3").innerHTML = "Error: "+err;
 	});
     microgear.connect(APPID);
-microgear.subscribe("video"); 
+ 
 	
 	//microgear.chat("Led8x8Mono","Hello from myself at "+Date.now());
 	function myFunction() {
