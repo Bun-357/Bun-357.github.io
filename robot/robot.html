@@ -1,0 +1,55 @@
+<style type="text/css">
+#myImg {
+  
+  /* Preserve aspet ratio */
+  min-width: 35%;
+  min-height: 35%;
+}
+</style>
+
+
+<script src="https://netpie.io/microgear.js"></script>
+<script>
+  const APPID     = "Led8x8Mono";
+  const APPKEY    = "8NH4EmFlB4qIRe9";
+  const APPSECRET = "Za2VI7miO3Zq1PkXfLmXyzR06";
+  const ALIAS = "myX";
+  
+  var microgear = Microgear.create({
+        key: APPKEY,
+        secret: APPSECRET,
+        alias : ALIAS         /*  optional  */
+    });
+  
+  var imgX = "data:image/jpeg;base64,";
+  
+  microgear.on('message',function(topic,msg) {
+    	//
+     document.getElementById("myImg").src = imgX+msg;
+    });
+    
+     microgear.on('connected', function() {
+       
+        document.getElementById("data").innerHTML = "Now I am connected with netpie...";
+    
+	      microgear.subscribe("/video/1");
+    });
+    
+     microgear.on('present', function(event) {
+        console.log(event);
+    });
+    microgear.on('absent', function(event) {
+        console.log(event);
+    });
+	
+	microgear.on("error", function(err) {
+		console.log("Error: "+err);
+    document.getElementById("data").innerHTML = err;
+	
+	});
+    microgear.connect(APPID);
+    
+    </script>
+    
+    <div id="data">Waite for conect NetPie</div>
+    <img id = "myImg" src = "imgX"/>
