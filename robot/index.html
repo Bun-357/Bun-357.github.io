@@ -35,6 +35,8 @@ var x = 0;
   microgear.on('message',function(topic,msg) {
     	//
      document.getElementById("myImg").src = imgX+msg;
+	  
+	  document.getElementById("myV").src = imgX+msg;
     });
     
      microgear.on('connected', function() {
@@ -117,9 +119,7 @@ if (event.keyCode == d) {
 		ss = 1;
 		microgear.chat("aVideo","start");
 		microgear.chat("aVideo","start");
-		microgear.chat("aVideo","start");
-		microgear.chat("aVideo","start");
-		microgear.chat("aVideo","start");
+		
 		
 	}
 	
@@ -142,6 +142,6 @@ if (event.keyCode == d) {
 <input id="sv" type="button" value="stratVideo" onclick="stratVideo();" />
 <input id="stv" type="button" value="stopVideo" onclick="stopVideo();" />
     <img id = "myImg" src = "imgX"/>
-<video src="imgX" controls>
+<video id = "myV" src="imgX" controls>
    Your browser does not support the <code>video</code> element.
 </video>
