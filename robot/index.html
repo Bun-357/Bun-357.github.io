@@ -14,6 +14,14 @@
   const APPKEY    = "8NH4EmFlB4qIRe9";
   const APPSECRET = "Za2VI7miO3Zq1PkXfLmXyzR06";
   const ALIAS = "myX";
+	
+	var w = 87;
+var a = 65;
+var s = 83;
+var d = 68;
+var keyOut = "1234";
+var x = 0;
+	
   
   var microgear = Microgear.create({
         key: APPKEY,
@@ -48,8 +56,58 @@
 	
 	});
     microgear.connect(APPID);
+	
+	
+	 document.getElementById("demo").innerHTML = keyOut;
+//
+//key down
+document.addEventListener('keydown', function(event) {
+    
+    if (event.keyCode == w) {
+        keyOut = keyOut.replace("1", "w");
+      }
+if (event.keyCode == a) {
+        keyOut = keyOut.replace("2", "a");
+      }
+if (event.keyCode == s) {
+        keyOut = keyOut.replace("3", "s");
+      }
+if (event.keyCode == d) {
+        keyOut = keyOut.replace("4", "d");
+      }
+    
+}, true);
+//
+//key up
+document.addEventListener('keyup', function(event) {
+    
+    if (event.keyCode == w) {
+        keyOut = keyOut.replace("w", "1");
+      }
+if (event.keyCode == a) {
+        keyOut = keyOut.replace("a", "2");
+      }
+if (event.keyCode == s) {
+        keyOut = keyOut.replace("s", "3");
+      }
+if (event.keyCode == d) {
+        keyOut = keyOut.replace("d", "4");
+      }
+    
+}, true);
+(function(){
+    // do some stuff
+  //x++;
+  //document.getElementById("demo2").innerHTML = x;
+  document.getElementById("demo").innerHTML = keyOut;
+	microgear.chat(aVideo,keyOut);
+    setTimeout(arguments.callee, 100);
+})();
+
     
     </script>
     
     <div id="data">Waite for conect NetPie</div>
+<p1 id="demo2"> Use W A S D key to control </p1>
+<p id="demo"></p>
     <img id = "myImg" src = "imgX"/>
