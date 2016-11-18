@@ -80,14 +80,11 @@ if (event.keyCode == d) {
       }
     
 }, true);
-(function(){
-    // do some stuff
-  //x++;
-  //document.getElementById("demo2").innerHTML = x;
+	     
+ setInterval(function() {
   document.getElementById("demo").innerHTML = keyOut;
-	microgear.chat(aVideo,keyOut);
-    setTimeout(arguments.callee, 100);
-})();
+	 microgear.chat(aVideo,keyOut);
+ },100);
 	     
 	     
 	     
