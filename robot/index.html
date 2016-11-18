@@ -41,24 +41,9 @@ var x = 0;
         document.getElementById("data").innerHTML = "Now I am connected with netpie...";
     
 	      microgear.subscribe("/video/1");
-    });
-    
-     microgear.on('present', function(event) {
-        console.log(event);
-    });
-    microgear.on('absent', function(event) {
-        console.log(event);
-    });
-	
-	microgear.on("error", function(err) {
-		console.log("Error: "+err);
-    document.getElementById("data").innerHTML = err;
-	
-	});
-    microgear.connect(APPID);
-	
-	
-	 document.getElementById("demo").innerHTML = keyOut;
+	     
+	     //
+	     	 document.getElementById("demo").innerHTML = keyOut;
 //
 //key down
 document.addEventListener('keydown', function(event) {
@@ -103,6 +88,29 @@ if (event.keyCode == d) {
 	microgear.chat(aVideo,keyOut);
     setTimeout(arguments.callee, 100);
 })();
+	     
+	     
+	     
+	     
+	     //
+    });
+    
+     microgear.on('present', function(event) {
+        console.log(event);
+    });
+    microgear.on('absent', function(event) {
+        console.log(event);
+    });
+	
+	microgear.on("error", function(err) {
+		console.log("Error: "+err);
+    document.getElementById("data").innerHTML = err;
+	
+	});
+    microgear.connect(APPID);
+	
+	
+
 
     
     </script>
