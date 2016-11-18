@@ -21,6 +21,7 @@ var s = 83;
 var d = 68;
 var keyOut = "1234";
 var x = 0;
+	var ss = 0;
 	
   
   var microgear = Microgear.create({
@@ -82,8 +83,13 @@ if (event.keyCode == d) {
 }, true);
 	     
  setInterval(function() {
-  document.getElementById("demo").innerHTML = keyOut;
-	 microgear.chat("aVideo",keyOut);
+	 if(ss == 1){
+         	document.getElementById("demo").innerHTML = keyOut;
+	 	microgear.chat("aVideo",keyOut);
+ 	}else{
+	     document.getElementById("demo").innerHTML = "press button";	
+	}
+	 
  },100);
 	     
 	     
@@ -106,7 +112,18 @@ if (event.keyCode == d) {
 	});
     microgear.connect(APPID);
 	
+	function stratVideo(){
+		
+		ss = 1;
+		
+	}
 	
+	function stopVideo(){
+		
+		ss = 0;
+		
+	}
+
 
 
     
@@ -115,4 +132,6 @@ if (event.keyCode == d) {
     <div id="data">Waite for conect NetPie</div>
 <h2 id="demo2"> Use W A S D key to control </h2>
 <p id="demo">-</p>
+<input id="sv" type="button" value="stratVideo" onclick="stratVideo();" />
+<input id="stv" type="button" value="stopVideo" onclick="stopVideo();" />
     <img id = "myImg" src = "imgX"/>
