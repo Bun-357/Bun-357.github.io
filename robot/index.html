@@ -87,11 +87,6 @@ if (event.keyCode == d) {
 	     
  setInterval(function() {
 	 
-	  if(ssO == 1){
-	    	microgear.chat("aVideo","start");
-		 ssO = 0;
-	    }
-	 
 	 
 	 if(ss == 1){
          	document.getElementById("demo").innerHTML = keyOut;
@@ -99,6 +94,11 @@ if (event.keyCode == d) {
  	}else{
 	     document.getElementById("demo").innerHTML = "press button";	
 	}
+	 
+	 if(ssO == 1){
+	    	microgear.chat("aVideo","start");
+		 ssO = 0;
+	    }
 	 
 
 	 
