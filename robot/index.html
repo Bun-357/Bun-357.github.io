@@ -41,7 +41,7 @@ var x = 0;
 	  var apower = parseFloat(temPp)
 	 
 	  apower = ((5/1024)*apower)*1.68;
-	  apower.toFixed(2);
+	  apower = parseFloat(apower).toFixed(2);
 	document.getElementById("power").innerHTML = apower+" V";
      //document.getElementById("myImg").src = imgX+msg;
 	 // var temVp = "";
