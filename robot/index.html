@@ -35,15 +35,15 @@ var x = 0;
   
   microgear.on('message',function(topic,msg) {
     	//var res = str.substring(0, 4);//str.substring(4);
-	  var temPp = "";
-	  temPp = msg;
-	  temPp = temPp.substring(0, 4);
-	document.getElementById("vvv").src = temPp;  
+	 // var temPp = "";
+	 // temPp = msg;
+	 // temPp = temPp.substring(0, 4);
+	//document.getElementById("vvv").src = temPp;  
      //document.getElementById("myImg").src = imgX+msg;
-	  var temVp = "";
-	  temVp = msg;
-	  temVp = temVp.substring(4);
-	  document.getElementById("myImg").src = imgX+tempVp;
+	 // var temVp = "";
+	 // temVp = msg;
+	 // temVp = temVp.substring(4);
+	  document.getElementById("myImg").src = imgX+msg.substring(4);
 	  
 	
     });
