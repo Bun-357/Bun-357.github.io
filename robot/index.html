@@ -22,6 +22,7 @@ var d = 68;
 var keyOut = "1234";
 var x = 0;
 	var ss = 0;
+	var ssO = 0;
 	
   
   var microgear = Microgear.create({
@@ -92,6 +93,11 @@ if (event.keyCode == d) {
 	     document.getElementById("demo").innerHTML = "press button";	
 	}
 	 
+	 if(ssO == 1){
+	    	microgear.chat("aVideo","start");
+		 ssO = 0;
+	    }
+	 
  },100);
 	     
 	     
@@ -117,8 +123,9 @@ if (event.keyCode == d) {
 	function stratVideo(){
 		
 		ss = 1;
-		microgear.chat("aVideo","start");
-		microgear.chat("aVideo","start");
+		//microgear.chat("aVideo","start");
+		//microgear.chat("aVideo","start");
+		ssO = 1;
 		
 		
 	}
@@ -127,7 +134,7 @@ if (event.keyCode == d) {
 		
 		ss = 0;
 		microgear.chat("aVideo","stop");
-		microgear.chat("aVideo","stop");
+		//microgear.chat("aVideo","stop");
 		
 	}
 
