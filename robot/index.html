@@ -35,9 +35,12 @@ var x = 0;
   
   microgear.on('message',function(topic,msg) {
     	//var res = str.substring(0, 4);//str.substring(4);
-	document.getElementById("vv").src = msg.substring(0, 4);  
+	  var temP = msg;
+	  temP = temP.substring(0, 4);
+	document.getElementById("vv").src = temP;  
      //document.getElementById("myImg").src = imgX+msg;
-	  var tempV = msg.substring(4);
+	  var temV = msg;
+	  temV = temV.substring(4);
 	  document.getElementById("myImg").src = imgX+tempV;
 	  
 	
