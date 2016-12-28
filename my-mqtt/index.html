@@ -35,7 +35,7 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
   console.log("onMessageArrived:"+message.payloadString);
-  document.getElementById("myImg").src = imgX+message;
+  document.getElementById("myImg").src = imgX+message.payloadString;
 }
 
 </script>
