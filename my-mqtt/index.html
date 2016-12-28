@@ -3,7 +3,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
 <script>
-
+var imgX = "data:image/jpeg;base64,";
 // Create a client instance
 client = new Paho.MQTT.Client("128.199.146.31", Number(8080),"/websockets", "clientId");
 
@@ -35,8 +35,9 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
   console.log("onMessageArrived:"+message.payloadString);
+  document.getElementById("myImg").src = imgX+message;
 }
 
 </script>
-
+<img id="myImg" src="" />
 
