@@ -5,7 +5,7 @@
 <script>
 conn = new WebSocket('ws://localhost:8080');
 // Create a client instance
-client = new Paho.MQTT.Client("128.199.146.31", Number(1883),"" "clientId");
+client = new Paho.MQTT.Client("128.199.146.31", Number(1883),"", "clientId");
 
 // set callback handlers
 client.onConnectionLost = onConnectionLost;
