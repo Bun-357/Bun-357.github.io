@@ -5,7 +5,7 @@
 <script>
 
 // Create a client instance
-client = new Paho.MQTT.Client(location.hostname, Number(location.port), "clientId");
+client = new Paho.MQTT.Client("tcp://128.199.146.31", Number(8080),"", "clientId");
 
 // set callback handlers
 client.onConnectionLost = onConnectionLost;
